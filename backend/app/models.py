@@ -9,8 +9,13 @@ class URLCheckRequest(BaseModel):
     )
 
 class URLCheckResponse(BaseModel):
-    url: str
-    is_safe: bool
-    threat_level: str
-    confidence_score: float
-    summary: str
+    class URLCheckResponse(BaseModel):
+        url: str
+        is_safe: bool
+        risk_level: str
+        risk_score: float
+        ml_probability: float
+        rule_score: float
+        summary: str
+        findings: list
+        guidance: str
