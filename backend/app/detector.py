@@ -1,6 +1,7 @@
 import os
 import joblib
 import numpy as np
+import boto3
 
 from app.risk_engine import compute_final_risk
 from engine.parser import parse_url
@@ -8,9 +9,37 @@ from app.brand_loader import load_brands
 from app.explanation_builder import build_human_explanation
 
 
+# -------------------------------------------------
+# 0️⃣ Setup Paths
+# -------------------------------------------------
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-MODEL_PATH = os.path.join(BASE_DIR, "ml_model", "phishing_model.pkl")
+MODEL_DIR = os.path.join(BASE_DIR, "ml_model")
+MODEL_PATH = os.path.join(MODEL_DIR, "phishing_model.pkl")
 
+# S3 Config
+BUCKET_NAME = "phishing-guardian-model-bucket"
+MODEL_KEY = "phishing_model.pkl"
+
+
+# -------------------------------------------------
+# 1️⃣ Ensure model directory exists
+# -------------------------------------------------
+os.makedirs(MODEL_DIR, exist_ok=True)
+
+
+# -------------------------------------------------
+# 2️⃣ Download model from S3 (ONLY if not present)
+# -------------------------------------------------
+if not os.path.exists(MODEL_PATH):
+    print("Downloading model from S3...")
+    s3 = boto3.client("s3")
+    s3.download_file(BUCKET_NAME, MODEL_KEY, MODEL_PATH)
+    print("Model downloaded successfully!")
+
+
+# -------------------------------------------------
+# 3️⃣ Load Model
+# -------------------------------------------------
 model = joblib.load(MODEL_PATH)
 
 
@@ -37,7 +66,6 @@ def predict_url(url: str):
     # -------------------------------------------------
     if lower_domain in brand_list:
 
-        # Categories that indicate REAL spoofing
         suspicious_categories = {
             "brand_impersonation",
             "character_substitution",
@@ -53,10 +81,6 @@ def predict_url(url: str):
             for f in findings
         )
 
-        # Only whitelist if ALL conditions satisfied:
-        # 1️⃣ Domain is fully lowercase (normal legit usage)
-        # 2️⃣ No suspicious findings
-        # 3️⃣ ML probability not extremely high
         if (
             domain == lower_domain
             and not has_real_threat
