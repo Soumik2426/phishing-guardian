@@ -4,18 +4,17 @@ from contextlib import asynccontextmanager
 from app.core.model_loader import load_model
 from app.api.routes.health import router as health_router
 from app.api.routes.scan import router as scan_router
+from app.core.logger import logger
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    """
-    Runs once when the application starts.
-    """
-
+    logger.info("Starting application...")
     load_model()
+    logger.info("Application startup completed.")
 
     yield
 
-    print("Application shutting down...")
+    logger.info("Application shutting down...")
 
 
 app = FastAPI(
