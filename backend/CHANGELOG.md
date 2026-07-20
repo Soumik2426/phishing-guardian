@@ -57,4 +57,24 @@ All notable changes to the Phishing Guardian backend are documented here.
 - Cleaner separation between configuration and business logic.
 - Easier future model upgrades and version management.
 
----
+# Step 4 - Production Logging ✅
+
+## Added
+
+- Introduced centralized application logger.
+- Added console logging with structured formatting.
+- Added persistent file logging.
+- Automatic creation of the `logs` directory.
+- Implemented rotating log files with automatic cleanup.
+
+## Changed
+
+- Replaced all `print()` statements with structured logging.
+- Configured environment-aware log levels.
+
+## Benefits
+
+- Persistent application logs.
+- Easier debugging and monitoring.
+- Controlled disk usage through log rotation.
+- Production-ready logging infrastructure.
