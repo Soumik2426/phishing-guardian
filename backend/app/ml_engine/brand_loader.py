@@ -2,7 +2,7 @@ import os
 
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-BRAND_FILE = os.path.join(BASE_DIR, "brands.txt")
+BRAND_FILE = os.path.join(BASE_DIR, "../brands.txt")
 
 
 def load_brands():

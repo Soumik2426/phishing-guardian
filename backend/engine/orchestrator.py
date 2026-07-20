@@ -13,7 +13,7 @@ from engine.pattern_analysis import analyze_pattern
 from engine.linguistic_analysis import analyze_linguistics
 from engine.dga_detection import analyze_dga_pattern
 
-from app.brand_loader import load_brands
+from app.ml_engine.brand_loader import load_brands
 
 
 def run_engine(url: str):

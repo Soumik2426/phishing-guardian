@@ -1,7 +1,7 @@
 # engine/linguistic_analysis.py
 
 import math
-from app.brand_loader import load_brands
+from app.ml_engine.brand_loader import load_brands
 
 
 def shannon_entropy(data: str):

@@ -1,6 +1,6 @@
 # engine/character_substitution.py
 
-from app.brand_loader import load_brands
+from app.ml_engine.brand_loader import load_brands
 
 COMMON_SUBSTITUTIONS = {
     "0": "o",

@@ -1,46 +1,12 @@
-import os
-import joblib
-import numpy as np
-import boto3
+from app.core.model_loader import get_model
 
-from app.risk_engine import compute_final_risk
+from app.ml_engine.risk_engine import compute_final_risk
 from engine.parser import parse_url
-from app.brand_loader import load_brands
-from app.explanation_builder import build_human_explanation
+from app.ml_engine.brand_loader import load_brands
+from app.ml_engine.explanation_builder import build_human_explanation
 
 
-# -------------------------------------------------
-# 0️⃣ Setup Paths
-# -------------------------------------------------
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-MODEL_DIR = os.path.join(BASE_DIR, "ml_model")
-MODEL_PATH = os.path.join(MODEL_DIR, "phishing_model.pkl")
 
-# S3 Config
-BUCKET_NAME = "phishing-guardian-model-bucket"
-MODEL_KEY = "phishing_model.pkl"
-
-
-# -------------------------------------------------
-# 1️⃣ Ensure model directory exists
-# -------------------------------------------------
-os.makedirs(MODEL_DIR, exist_ok=True)
-
-
-# -------------------------------------------------
-# 2️⃣ Download model from S3 (ONLY if not present)
-# -------------------------------------------------
-if not os.path.exists(MODEL_PATH):
-    print("Downloading model from S3...")
-    s3 = boto3.client("s3")
-    s3.download_file(BUCKET_NAME, MODEL_KEY, MODEL_PATH)
-    print("Model downloaded successfully!")
-
-
-# -------------------------------------------------
-# 3️⃣ Load Model
-# -------------------------------------------------
-model = joblib.load(MODEL_PATH)
 
 
 def predict_url(url: str):
@@ -48,6 +14,8 @@ def predict_url(url: str):
     # -------------------------------------------------
     # 1️⃣ Compute Hybrid Risk
     # -------------------------------------------------
+    model = get_model()
+
     result = compute_final_risk(url, model)
 
     risk_level = result["risk_level"]
