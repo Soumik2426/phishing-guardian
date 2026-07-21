@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="25a7a3af-2ce7-409a-be74-f5b70ead2e42" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/backend/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.env.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/backend/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/api/routes/health.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/api/routes/health.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/api/routes/scan.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/api/routes/scan.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/core/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/core/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/core/model_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/core/model_loader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/requirements.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotChats">
+    <option name="panelChat">
+      <chat>
+        <option name="activeSessionId" value="1e424eb0-e4b7-4bec-ad32-e14f0f194710" />
+        <option name="sessions">
+          <session>
+            <option name="chatType" value="PANEL" />
+            <option name="id" value="1e424eb0-e4b7-4bec-ad32-e14f0f194710" />
+            <option name="modeId" value="Ask" />
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="auto" />
+            <option name="targetType" value="LOCAL" />
+          </session>
+        </option>
+        <option name="type" value="PANEL" />
+      </chat>
+    </option>
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_C:/Users/SOUMIK/Downloads/phishing-guardian" value="39hioGWkI704Q3iJXDVAnj9Vgl6" />
+    </persistenceIdMap>
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="13203" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Soumik2426&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Soumik2426/phishing-guardian.git&quot;,
+    &quot;accountId&quot;: &quot;5c24512e-ea51-4dfe-a5fc-65d243ca08ee&quot;
+  }
+}</component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0012037451665776" />
+      <entry key="MS500" value="1.5446913467020527" />
+      <entry key="S2" value="2.930155703282095" />
+      <entry key="S5" value="3.5115603819681755" />
+      <entry key="S10" value="3.7443278820345665" />
+      <entry key="S30" value="3.9133041825768284" />
+      <entry key="S60" value="4.046804286513828" />
+      <entry key="M2" value="4.815782098749095" />
+      <entry key="M5" value="7.588138088762973" />
+      <entry key="M10" value="10.350702115611163" />
+      <entry key="M15" value="12.127985109856326" />
+      <entry key="M30" value="16.67023038072577" />
+      <entry key="H1" value="32.84560473828685" />
+      <entry key="H2" value="103.8906030196424" />
+      <entry key="H4" value="299.17128642276606" />
+      <entry key="D1" value="908.7313885951052" />
+      <entry key="W1" value="1116.5838477876289" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="1.51487778522258E-192" />
+      <entry key="S10" value="1.4140203571188168E-96" />
+      <entry key="S30" value="1.651237357272509E-32" />
+      <entry key="S60" value="1.797323012744096E-16" />
+      <entry key="M2" value="1.8906279140724906E-8" />
+      <entry key="M5" value="0.0012330072807929392" />
+      <entry key="M10" value="0.04965525251870809" />
+      <entry key="M15" value="0.17035515167663817" />
+      <entry key="M30" value="0.5958454966143371" />
+      <entry key="H1" value="1.214020300486498" />
+      <entry key="H2" value="2.3771467239446977" />
+      <entry key="H4" value="5.265464692924165" />
+      <entry key="D1" value="14.904778791652783" />
+      <entry key="W1" value="18.341672440483485" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.6204371275913557" />
+      <entry key="MS500" value="1.3073978446815926" />
+      <entry key="S2" value="2.7396318236437676" />
+      <entry key="S5" value="3.410493383251143" />
+      <entry key="S10" value="3.688655115092987" />
+      <entry key="S30" value="3.893494020938626" />
+      <entry key="S60" value="4.0367078383378034" />
+      <entry key="M2" value="4.810574256686061" />
+      <entry key="M5" value="7.58708590517634" />
+      <entry key="M10" value="10.39882940053853" />
+      <entry key="M15" value="12.296793685065209" />
+      <entry key="M30" value="17.26441761481862" />
+      <entry key="H1" value="34.05821170658653" />
+      <entry key="H2" value="106.26662067669263" />
+      <entry key="H4" value="304.4357713462095" />
+      <entry key="D1" value="923.6357986208182" />
+      <entry key="W1" value="1134.925457529984" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="39hioGWkI704Q3iJXDVAnj9Vgl6" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;copilot.chat.legacySessionMetadata.migrated&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\SOUMIK\Downloads\phishing-guardian\backend" />
+      <recent name="C:\Users\SOUMIK\Downloads\phishing-guardian\backend\app\ml_engine" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-PY-261.24374.152" />
+        <option value="bundled-python-sdk-c59985aa861c-c2ffad84badb-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-261.24374.152" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="25a7a3af-2ce7-409a-be74-f5b70ead2e42" name="Changes" comment="" />
+      <created>1771154876671</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1771154876671</updated>
+      <workItem from="1771154878357" duration="658000" />
+      <workItem from="1771157442505" duration="8821000" />
+      <workItem from="1772002591448" duration="9723000" />
+      <workItem from="1772103118654" duration="70000" />
+      <workItem from="1772182071545" duration="15961000" />
+      <workItem from="1772251535297" duration="1213000" />
+      <workItem from="1774337267555" duration="4304000" />
+      <workItem from="1775239533478" duration="1441000" />
+      <workItem from="1775398691173" duration="631000" />
+      <workItem from="1775399543035" duration="6603000" />
+      <workItem from="1775581550145" duration="610000" />
+      <workItem from="1779742454027" duration="630000" />
+      <workItem from="1779743166568" duration="904000" />
+      <workItem from="1779744515869" duration="480000" />
+      <workItem from="1781804332961" duration="8000" />
+      <workItem from="1781967070347" duration="9000" />
+      <workItem from="1782109105421" duration="1391000" />
+      <workItem from="1782916350114" duration="13000" />
+      <workItem from="1783167565585" duration="17000" />
+      <workItem from="1784531418054" duration="13376000" />
+      <workItem from="1784643288131" duration="16188000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/phishing_guardian$main.coverage" NAME="main Coverage Results" MODIFIED="1784533047111" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/app" />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
+  </component>
+</project>

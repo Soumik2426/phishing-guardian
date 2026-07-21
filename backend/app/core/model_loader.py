@@ -6,6 +6,10 @@ from botocore.exceptions import ClientError, NoCredentialsError
 
 from app.core.config import settings
 from app.core.logger import logger
+from app.exceptions.custom_exceptions import (
+    AppException,
+    ModelNotLoadedException,
+)
 
 # Cache loaded model
 _model = None
@@ -63,14 +67,18 @@ def load_model():
 
         except NoCredentialsError:
             logger.error("AWS credentials not found.")
-            raise RuntimeError(
-                "Model not found locally and AWS credentials are unavailable."
+
+            raise AppException(
+                message="Model not found locally and AWS credentials are unavailable.",
+                status_code=500
             )
 
         except ClientError as e:
             logger.error(f"Failed to download model from S3: {e}")
-            raise RuntimeError(
-                f"Failed to download model from S3: {e}"
+
+            raise AppException(
+                message=f"Failed to download model from S3: {e}",
+                status_code=500
             )
 
     logger.info("Loading ML model...")
@@ -89,7 +97,8 @@ def get_model():
 
     if _model is None:
         logger.error("Model has not been loaded.")
-        raise RuntimeError(
+
+        raise ModelNotLoadedException(
             "Model has not been loaded."
         )
 

@@ -2,9 +2,11 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
 from app.core.model_loader import load_model
-from app.api.routes.health import router as health_router
+from app.api.routes.auth import router as auth_router
 from app.api.routes.scan import router as scan_router
 from app.core.logger import logger
+from app.exceptions.handlers import register_exception_handlers
+from app.core.config import settings
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -18,10 +20,12 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(
-    title="Phishing Guardian API",
-    version="2.0.0",
-    lifespan=lifespan
+    title=settings.APP_NAME,
+    version=settings.APP_VERSION,
+    lifespan=lifespan,
 )
+
+register_exception_handlers(app)
 
 app.add_middleware(
     CORSMiddleware,
@@ -31,5 +35,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(health_router)
+app.include_router(
+    auth_router,
+    prefix="/api/v1",
+)
 app.include_router(scan_router)

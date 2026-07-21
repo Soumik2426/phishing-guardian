@@ -1,4 +1,4 @@
-# Changelog
+# CHANGELOG
 
 All notable changes to the Phishing Guardian backend are documented here.
 
@@ -78,3 +78,88 @@ All notable changes to the Phishing Guardian backend are documented here.
 - Easier debugging and monitoring.
 - Controlled disk usage through log rotation.
 - Production-ready logging infrastructure.
+
+---
+
+# Step 3 - Logging & Monitoring ✅
+
+## Added
+
+- Introduced a centralized logging utility.
+- Configured application-wide logging with custom formatting.
+- Added console logging for development.
+- Added persistent file logging.
+- Automatically created the `logs` directory on application startup.
+- Implemented rotating log files using `RotatingFileHandler`.
+
+## Changed
+
+- Replaced all `print()` statements with structured logger calls.
+- Configured environment-aware log levels based on application settings.
+
+## Benefits
+
+- Centralized logging across the application.
+- Persistent logs for debugging and auditing.
+- Controlled disk usage through automatic log rotation.
+- Production-ready logging infrastructure.
+
+---
+
+# Step 4 - Global Exception Handling & Standardized API Responses ✅
+
+## Added
+
+- Introduced a global exception handling mechanism.
+- Added custom application exceptions.
+- Added centralized exception registration.
+- Implemented standardized API response schema.
+- Added reusable response builder utilities.
+
+## Changed
+
+- Replaced ad-hoc exception handling with centralized handlers.
+- Standardized success and error responses across all endpoints.
+- Updated API routes to use the unified response format.
+
+## Benefits
+
+- Consistent API responses.
+- Simplified error management.
+- Improved client-side integration.
+- Easier debugging and maintenance.
+
+---
+
+# Step 5 - Database Infrastructure & SQLAlchemy Integration ✅
+
+## Added
+
+- Integrated PostgreSQL as the primary relational database.
+- Added centralized database configuration through environment variables.
+- Configured SQLAlchemy Engine and Session Factory.
+- Implemented dependency injection for database sessions.
+- Created the SQLAlchemy Declarative Base.
+- Added reusable `BaseEntity` with common fields:
+  - UUID primary key
+  - `created_at`
+  - `updated_at`
+- Added database connectivity verification scripts:
+  - `test_connection.py`
+  - `test_psycopg2.py`
+
+## Changed
+
+- Centralized database connection management within the `database` package.
+- Configured connection pooling with `pool_pre_ping=True`.
+- Removed hardcoded database configuration from the application.
+
+## Benefits
+
+- Production-ready database infrastructure.
+- Reusable ORM foundation for future entities.
+- Efficient connection management.
+- Simplified dependency injection.
+- Verified PostgreSQL and SQLAlchemy integration.
+
+---
