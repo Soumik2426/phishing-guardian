@@ -162,4 +162,40 @@ All notable changes to the Phishing Guardian backend are documented here.
 - Simplified dependency injection.
 - Verified PostgreSQL and SQLAlchemy integration.
 
----
+Step 6 - Authentication System (JWT + Email Verification + Redis OTP) ✅
+Added
+Implemented a complete JWT-based authentication system.
+Added user registration and login APIs.
+Introduced secure password hashing using BCrypt.
+Implemented JWT Access Token and Refresh Token generation.
+Added email verification during user registration.
+Integrated Redis for temporary OTP storage.
+Configured OTP expiration with automatic TTL (5 minutes).
+Added HTML email templates for verification emails using Jinja2.
+Integrated FastAPI-Mail with Gmail SMTP for email delivery.
+Added email verification endpoint.
+Added role support for authenticated users.
+Introduced dedicated authentication schemas for request and response validation.
+Added reusable services:
+AuthService
+EmailService
+OTPService
+RedisService
+JwtService
+Changed
+User registration now requires email verification before login.
+Login now validates:
+Email existence
+Password correctness
+Account status
+Email verification status
+Centralized authentication business logic into the service layer.
+Integrated Redis into the authentication workflow for OTP management.
+Benefits
+Production-ready authentication architecture.
+Secure password storage using BCrypt.
+Stateless authentication using JWT.
+Email ownership verification before account activation.
+Fast temporary OTP storage with automatic expiration.
+Modular authentication services following Clean Architecture.
+Easily extensible for password reset, resend OTP, and MFA in future releases.

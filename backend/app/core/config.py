@@ -55,6 +55,22 @@ class Settings(BaseSettings):
         case_sensitive=True
     )
 
+    # MAIL
+    MAIL_USERNAME: str
+    MAIL_PASSWORD: str
+    MAIL_FROM: str
+    MAIL_PORT: int
+    MAIL_SERVER: str
+    MAIL_STARTTLS: bool = True
+    MAIL_SSL_TLS: bool = False
+    MAIL_FROM_NAME: str = "Phishing Guardian"
+
+    # REDIS
+    REDIS_HOST: str = "localhost"
+    REDIS_PORT: int = 6379
+    REDIS_DB: int = 0
+    REDIS_PASSWORD: str | None = None
+
 
 @lru_cache
 def get_settings():

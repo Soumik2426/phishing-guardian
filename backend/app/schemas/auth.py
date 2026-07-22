@@ -1,39 +1,50 @@
-from pydantic import BaseModel, ConfigDict, EmailStr, Field
-from pydantic import field_validator
+from pydantic import (
+    BaseModel,
+    ConfigDict,
+    EmailStr,
+    Field,
+    field_validator,
+)
+
 from app.schemas.validators import validate_password
+
 
 class RegisterRequest(BaseModel):
     first_name: str = Field(
-        min_length=2
+        min_length=2,
     )
 
     @field_validator("first_name")
     @classmethod
     def validate_first_name(cls, value: str):
-
         value = value.strip()
+
         if not value:
             raise ValueError("First Name is required.")
 
         if len(value) < 2:
-            raise ValueError("First Name must be at least 2 characters.")
+            raise ValueError(
+                "First Name must be at least 2 characters."
+            )
+
         return value
 
     last_name: str = Field(
-        min_length=2
+        min_length=2,
     )
 
     @field_validator("last_name")
     @classmethod
     def validate_last_name(cls, value: str):
-
         value = value.strip()
 
         if not value:
             raise ValueError("Last Name is required.")
 
         if len(value) < 2:
-            raise ValueError("Last Name must be at least 2 characters.")
+            raise ValueError(
+                "Last Name must be at least 2 characters."
+            )
 
         return value
 
@@ -64,7 +75,7 @@ class RegisterRequest(BaseModel):
 
     @field_validator("password")
     @classmethod
-    def validate_password_strength(cls, value: str) -> str:
+    def validate_password_strength(cls, value: str):
         value = value.strip()
 
         if not value:
@@ -122,8 +133,24 @@ class VerifyEmailRequest(BaseModel):
         ...,
         min_length=6,
         max_length=6,
-        description="6-digit OTP",
+        description="6-digit verification OTP",
     )
+
+    @field_validator("otp")
+    @classmethod
+    def validate_otp(cls, value: str):
+        value = value.strip()
+
+        if not value:
+            raise ValueError("OTP is required.")
+
+        if not value.isdigit():
+            raise ValueError("OTP must contain only digits.")
+
+        if len(value) != 6:
+            raise ValueError("OTP must be exactly 6 digits.")
+
+        return value
 
     model_config = ConfigDict(
         json_schema_extra={
@@ -140,6 +167,20 @@ class ResendOtpRequest(BaseModel):
         ...,
         description="Registered email address",
     )
+
+    @field_validator("email", mode="before")
+    @classmethod
+    def validate_email(cls, value):
+        if value is None:
+            raise ValueError("Email is required.")
+
+        if isinstance(value, str):
+            value = value.strip()
+
+            if value == "":
+                raise ValueError("Email is required.")
+
+        return value
 
     model_config = ConfigDict(
         json_schema_extra={
