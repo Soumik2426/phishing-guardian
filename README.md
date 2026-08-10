@@ -559,18 +559,3 @@ The backend changelog shows the project evolved through a set of major refactors
 - JWT auth with email verification and Redis-backed OTP
 
 The source changelog is available at [backend/CHANGELOG.md](backend/CHANGELOG.md).
-
-## Suggested Next Steps for the Repository
-
-If you want this repo to feel complete to outside visitors, the next high-value improvements are:
-
-1. Add a `.env.example`
-2. Mount the health router
-3. Remove or protect the test auth endpoints
-4. Persist scan results into `scans` and `scan_metrics`
-5. Add tests for auth, model loading, and the scan pipeline
-6. Either build the frontend or remove the empty `frontend/` directory until it is ready
-
-## License
-
-No license file is currently present in the repository. If you want other people to use, modify, or contribute to this project safely, add an explicit license.
